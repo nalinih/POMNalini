@@ -19,7 +19,7 @@ public class TestBase {
 	public static Properties prop;
 	
 	public WebDriver inti_driver(String browserName){
-		System.out.println("Browser name is: " +browserName );
+		System.out.println("Browser name is : " +browserName );
 			if (browserName.equals("chrome")){
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
