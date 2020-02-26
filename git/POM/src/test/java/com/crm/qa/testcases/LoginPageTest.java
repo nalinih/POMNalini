@@ -25,7 +25,8 @@ public class LoginPageTest  {
 		driver=basePage.inti_driver(browserName);
 		driver.get(prop.getProperty("url"));
 		loginPage = new LoginPage(driver);
-	}
+		
+		}
 	
 	@Test(priority=1)
 	public void verifyPageTitle() throws InterruptedException{

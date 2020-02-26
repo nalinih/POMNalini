@@ -21,12 +21,13 @@ public class TestBase {
 	public WebDriver inti_driver(String browserName){
 		System.out.println("Browser name is : " +browserName );
 			if (browserName.equals("chrome")){
-				WebDriverManager.chromedriver().setup();
+				//WebDriverManager.chromedriver().setup();
+				WebDriverManager.chromedriver().version("80.0").setup();
 				driver = new ChromeDriver();
 				}
 			else if (browserName.equals("FireFox")){
 				WebDriverManager.firefoxdriver().setup();
-				driver = new ChromeDriver();
+				driver = new FirefoxDriver();
 			}
 			else{
 				System.out.println(browserName + "is not supporterd please give correct browser name");
@@ -34,7 +35,7 @@ public class TestBase {
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().window().fullscreen();
-			driver.get("url");
+			//driver.get("url");
 			return driver;
 			
 			
